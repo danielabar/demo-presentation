@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>Demo Presentation</title>
+
+	<!-- Framework -->
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+
+	<!-- Defaults to black, see dist/theme/*.css for other options -->
+	<!-- <link rel="stylesheet" href="dist/theme/black.css" id="theme"> -->
+	<link rel="stylesheet" href="dist/theme/moon.css" id="theme">
+
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+
+	<!-- Custom -->
+	<link rel="stylesheet" href="dist/custom.css">
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+
+			<!-- Start of presentation -->
+			<section>
+				<h1>Demo Presentation</h1>
+			</section>
+
+			<!-- Subheading and content -->
+			<section>
+				<h2>I'm a Sub Heading</h2>
+				<p>Here is some content.</p>
+				<p>and more content!</p>
+			</section>
+
+			<!-- Vertical slides -->
+			<section>
+				<p>This will remain visible for all vertical slides</p>
+				<section>Here is some vertical content</section>
+				<section>and some more</section>
+				<section>more stuff...</section>
+			</section>
+
+			<!-- Self hosted image -->
+			<section>
+				<h2>Self hosted image</h2>
+				<img src="images/reading-side.png" alt="reading side">
+			</section>
+
+			<!-- Linked image -->
+			<section>
+				<h2>Linked image</h2>
+				<img src="https://placekitten.com/800/500" alt="adorable kitten">
+			</section>
+
+			<!-- Full screen background -->
+			<section data-background="https://media.giphy.com/media/3oKIPmDhXaieiJE3Sg/giphy.gif">
+				<h2>Full Screen Background</h2>
+			</section>
+
+			<!-- Fragments -->
+			<section>
+				<h2>Fragments in DOM order</h2>
+				<ul>
+					<li class="fragment">This item will be displayed first</li>
+					<li class="fragment">This item will be second</li>
+					<li class="fragment">And this will be last</li>
+				</ul>
+			</section>
+
+			<!-- Fragments: Custom Order -->
+			<section>
+				<h2>Fragments in Custom Order</h2>
+				<ul>
+					<li class="fragment" data-fragment-index="3">Third</li>
+					<li class="fragment" data-fragment-index="2">Second</li>
+					<li class="fragment" data-fragment-index="1">First</li>
+				</ul>
+			</section>
+
+			<!-- Fragment: Alternate animation -->
+			<section>
+				<h2>Another Fragment Example</h2>
+				<p class="fragment fade-left">I will fade in from the left</p>
+			</section>
+
+			<!-- Custom Style -->
+			<section data-state="my-style">
+				<p>I'm special!</p>
+			</section>
+
+			<!-- Speaker Notes -->
+			<section>
+				<p>This slide has some speaker notes</p>
+				<aside class="notes">
+					These are the speaker notes.
+					They are only visible in a separate window after pressing the s key.
+				</aside>
+			</section>
+
+		</div>
+	</div>
+
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+		Reveal.initialize({
+			hash: true,
+
+			// Help the user learn the controls by providing hints, for example by
+			// bouncing the down arrow when they first encounter a vertical slide
+			controlsTutorial: false,
+
+			// Add your config here:
+			transition: 'convex',
+			transitionSpeed: 'slow',
+
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+		});
+	</script>
+</body>
+
+</html>
