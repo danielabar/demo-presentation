@@ -23,7 +23,7 @@ const autoprefixer = require('gulp-autoprefixer')
 
 const root = yargs.argv.root || '.'
 // do not commit port change
-const port = yargs.argv.port || 8001
+const port = yargs.argv.port || 8000
 
 const banner = `/*!
 * reveal.js ${pkg.version}
